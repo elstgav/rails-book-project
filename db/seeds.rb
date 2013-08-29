@@ -19,7 +19,7 @@ Product.create(title: 'CoffeeScript',
       </p>},
   image_url:   'cs.jpg',
   price: 36.00)
-
+# . . .
 Product.create(title: 'Programming Ruby 1.9',
   description:
     %{<p>
@@ -29,6 +29,7 @@ Product.create(title: 'Programming Ruby 1.9',
       </p>},
   image_url: 'ruby.jpg',
   price: 49.95)
+# . . .
 
 Product.create(title: 'Rails Test Prescriptions',
   description:
