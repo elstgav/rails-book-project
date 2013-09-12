@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ProductsControllerTest < ActionController::TestCase
   setup do
-    @product = products(:one)
+    @product = products(:ruby)
     @update  = {
       title:       'Lorem Ipsum',
       description: 'Wibbles are fun!',
@@ -15,6 +15,8 @@ class ProductsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:products)
+    assert_select '#main > table tr', 3
+    assert_select 'td.list_description dt', 'Programming Ruby 1.9'
   end
 
   test "should get new" do
